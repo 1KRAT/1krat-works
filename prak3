@@ -1,0 +1,21 @@
+using System;
+
+namespace prak3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double symm=0;
+            double e = Convert.ToDouble(Console.ReadLine());
+            while(symm <= e)
+            {
+                int i = 0;
+                symm = symm +(1 / ((i + 1) * (i + 3)));
+                i+=1;
+                Console.WriteLine(i);
+            }
+            Console.WriteLine(symm);
+        }
+    }
+}
