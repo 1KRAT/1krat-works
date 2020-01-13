@@ -1,0 +1,67 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("кол-во строк:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("кол-во столбцов:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Random rnd = new Random();
+            int[,] mass = new int[n, m];
+            int[] symm = new int[n];
+            int syma=0;
+            Console.WriteLine("Заполненый массив");
+            for(int i = 0; i<n;i++)
+            {
+                for(int j=0;j<m;j++)
+                {
+                    mass[i, j] = rnd.Next(0, 100);
+                    Console.Write(mass[i, j]+", ");
+                }
+                Console.WriteLine();
+            }
+            Console.Write("Сумма элементов строк: ");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    syma += mass[i, j];
+                }
+                symm[i] = syma;
+                Console.Write(symm[i]+", ");
+                syma = 0;
+            }
+            Console.WriteLine();
+            Console.Write("Произведение элементов строк: ");
+            syma = 1;
+            for (int i = 0; i < n; i++) 
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    syma *= mass[i, j];
+                }
+                symm[i] = syma;
+                Console.Write(symm[i]+", ");
+                syma = 1;
+            }
+            syma = 0;
+            Console.WriteLine();
+            Console.Write("Среднее арифмитическое значение элементов строк: ");
+            for (int i = 0; i < n; i++) 
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    syma += mass[i, j];
+                }
+                syma /= m;
+                symm[i] = syma;
+                Console.Write(symm[i] + ", ");
+                syma = 0;
+            }
+        }
+    }
+}
