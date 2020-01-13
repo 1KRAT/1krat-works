@@ -1,0 +1,26 @@
+using System;
+
+namespace prak4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           int s = 0;
+           int x = Convert.ToInt16(Console.ReadLine());
+           for (int i=2;i<x/2;i++)
+           {
+           	if(x % i)
+           	{
+           		s+=i;
+            }
+           }
+           if (x==s)
+           {
+           	Console.WriteLine("4islo sovershenno");
+           }
+           else 
+           Console.WriteLine("4islo ne sovershenno");
+        }
+    }
+}
