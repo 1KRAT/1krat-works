@@ -1,0 +1,36 @@
+using System;
+
+namespace NewC
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int x, y, x0, y0, r;
+            double l;
+            Console.Write("Введите х0: ");
+            x0 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Введите y0: ");
+            y0 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Введите х: ");
+            x = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Введите y: ");
+            y = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Введите r: ");
+            r = Convert.ToInt16(Console.ReadLine());
+            l = Math.Sqrt((x - x0) * (x - x0) + (y - y0) * (y - y0)); 
+            if (l <= r)
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine("Принадлежит");
+                       }
+            else
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine("Не пренадлежит");
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("It's Working!!!");
+        }
+    }
+}
